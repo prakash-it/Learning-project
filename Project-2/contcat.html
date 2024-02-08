@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Dentist | Porto - Multipurpose Website Template</title>
+
+  <!-- logo -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- style-sheets -->
+  <link rel="stylesheet" href="style/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="style/css/style.css">
+
+
+
+
+<body>
+  <div class="container">
+    <div class="curserinner"></div>
+    <div class="curserouter"> </div>
+  </div>
+
+  <div class="header">
+    <div class="container-fluid">
+      <nav class="nav-top">
+
+        <div class="item1">
+          <p>
+            <i class="fa-solid fa-location-dot "></i>
+            <span>99 Porto St, Los Angeles, CA 10000</span>
+          </p>
+        </div>
+
+        <div class="item2">
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            <span>mail@domain.com</span>
+          </p>
+        </div>
+
+        <div class="item3">
+          <p>
+            <i class="fa-solid fa-clock"></i>
+
+            <span> Mon - Sat 9:00am - 6:00pm / Sunday - CLOSED</span>
+          </p>
+        </div>
+
+        <div class="item4 ">
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            <span>123-456-7890</span>
+          </p>
+        </div>
+
+      </nav>
+    </div>
+    <hr>
+
+    <nav class="navbar navbar-expand-lg  mb-lg-0 px-4">
+      <div class="container-fluid">
+        <div class="row ">
+          <a class="navbar-brand" href="#" class="col">
+            <img src="images/logo.png" alt="No-Image" height="30px">
+          </a>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent col-lg-4">
+            <ul class="navbar-nav navbar me-auto  mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link font " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle font" href="#" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  SERVICES
+                </a>
+                <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Link 1</a></li>
+                  <li><a class="dropdown-item" href="#">Link 2</a></li>
+                  <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+              </li>
+
+
+              <li class="nav-item">
+                <a class="nav-link font" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font" href="#">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font" href="contcat.html"> Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle font" href="#" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Element
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Link 1</a></li>
+                  <li><a class="dropdown-item" href="#">Link 2</a></li>
+                  <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mx-4 px-4">
+          <div class="col">
+
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+          </div>
+
+          <div class="col">
+            <i class="fa-solid fa-bars icon"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+
+  <!-- afternav -->
+  <div class="container-fluid section p-relative">
+    <div class="container">
+      <div class="row pt-5 flexrow ">
+        <div class="col-sm-6 col-lg-8 pt-4">
+          <h1 class="textbolds">Contact</h1>
+        </div>
+    
+        <div class="col-sm-6 col-lg-4  textpad">
+          <a href="index.html" class="textbad1">Home</a> > Contact
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+  <!-- scriptforcurser -->
+  <script>
+    var curserinner = document.querySelector(".curserinner");
+    var curserouter = document.querySelector(".curserouter");
+    document.addEventListener("mousemove", function (e) {
+      curserinner.style.cssText = curserouter.style.cssText = "left:" + e.clientX + "px; top:" + e.clientY + "px;";
+    });
+  </script>
+
+  <script src="style/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="style/js/jquery.min.js"></script>
+</body>
+
+</html>
