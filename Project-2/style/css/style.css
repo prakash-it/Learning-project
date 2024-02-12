@@ -120,7 +120,6 @@ i
 
 
 
-
 .text
 
 {
@@ -164,48 +163,6 @@ i
     box-shadow: none; 
   }
 
-  .fade-in1 {
-    animation: fadeInAnimation 1s ease-in-out forwards;
-    opacity: 0;
-  }
-
-  @keyframes fadeInAnimation {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .fade-in2 {
-    animation: fadeInAnimation 1s ease-in-out forwards;
-    opacity: 0;
-  }
-
-  @keyframes fadeInAnimation {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .fade-in3
-  {
-    animation: fadeInAnimation 1.5s ease-in-out forwards;
-    opacity: 0;
-  }
-
-  @keyframes fadeInAnimation {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1.5;
-    }
-}
 .img-fulid
 {
     max-width: 90px;
@@ -267,6 +224,10 @@ footer
 }
 
 
+
+
+
+  
 
 
 
