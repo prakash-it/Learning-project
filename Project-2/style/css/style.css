@@ -16,6 +16,7 @@ body
     border-radius: 50%;
     transform: translate(-50%, -50%);
     transition: .1s;
+    z-index: 9999; 
 }
 
 .curserouter
@@ -31,6 +32,7 @@ body
     border-radius: 50%;
     transform: translate(-50%, -50%);
     transition: .1.2s;
+    z-index: 9999; 
 
 }
 
@@ -88,13 +90,17 @@ i
 {
     color: black;
 }
-.nav
+
+
+.center1
 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-       
- }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 200px;
+}
+
 
  nav a {
     
@@ -118,7 +124,12 @@ i
      
 }
 
-
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
 
 .text
 
@@ -223,10 +234,16 @@ footer
  letter-spacing: 2px;
 }
 
-
-
   
+.social-icons {
+    font-size: 20px;
+    margin-left: px;
+  }
+  .social-icons a {
 
+    margin-left: 5px;
+    
+  }
 
 
 
