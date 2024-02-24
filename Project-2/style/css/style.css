@@ -313,4 +313,18 @@ footer
 
 
 
+  /* For screens smaller than 768px (i.e., tablets and below) */
+@media (max-width: 767px) {
+    /* Adjust the width of the cards in the carousel */
+    .card {
+      width: 100%; /* Make cards take up full width */
+      margin-right: 0; /* Remove any right margin */
+      margin-bottom: 20px; /* Add some bottom margin for spacing */
+    }
+    
+    /* Center align the text within cards */
+    .card-body {
+      text-align: center;
+    }
+  }
   
