@@ -292,3 +292,25 @@ footer
   text-decoration: none;
 }
 
+
+
+@media (max-width: 768px) {
+
+    .item2,.item3,.item5, .item6,
+    .item7,.item-8{
+      display: none;
+    }
+  }
+  
+  
+  
+@media (max-width: 767px) {
+    .item7 img,
+    .item-8 img,  .cla  {
+        display: none; 
+    }
+}
+
+
+
+  

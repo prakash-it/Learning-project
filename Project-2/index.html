@@ -22,6 +22,8 @@
 
 
 <body>
+
+
   <div class="container">
     <div class="curserinner"></div>
     <div class="curserouter"> </div>
@@ -125,10 +127,10 @@
         
     
         <div class="row mx-4 px-4">
-          <div class="col">
+          <div class="col item5">
             <i class="fa-solid fa-magnifying-glass icon"></i>
           </div>
-          <div class="col">
+          <div class="col item6">
             <i class="fa-solid fa-bars icon"></i>
           </div>
         </div>
@@ -140,17 +142,17 @@
     
 
 
-
+<!-- open carsoul -->
 <div class="container-fluid ">
-  <div class="row ">
-    <div class="col" style="position: relative;">
+  <div class="row bg-light  ">
+    <div class="col item7" style="position: relative;">
       <img src="images/slide-dentist-1-2.jpg" alt="" style="height: 400px;">
       <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; text-align: center;">
         <h1>Affordable Full-Service Dental Care in LA</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum sed euismod dui.</p>
       </div>
     </div>
-    <div class="col" style="position: relative;">
+    <div class="col item-8" style="position: relative; display: flex; justify-content: end;">
       <img src="images/slide-dentist-1-1.jpg" alt="" style="height: 400px;">
     </div>
   </div>
@@ -428,8 +430,8 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="card-wrapper container-sm d-flex  justify-content-around">
-          <div class="card  " style="width: 18rem;">
-      <img src="images/team-3.jpg" class="card-img-top" alt="...">
+          <div class="card  cal" style="width: 18rem;">
+      <img src="images/team-3.jpg" class="card-img-top " alt="...">
       <div class="card-body">
         <h4 class="card-title" style="text-align: center;">John Doe</h4>
         <p style="text-align: center;">Dentist, Owener</p>
@@ -443,7 +445,7 @@
         
       </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card cal" style="width: 18rem;">
       <img src="images/team-1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h4 class="card-title" style="text-align: center;">Peter phillips</h4>
@@ -455,21 +457,22 @@
         </div>
         <div class="carousel-item">
           <div class="card-wrapper container-sm d-flex   justify-content-around">
-          <div class="card  " style="width: 18rem;">
+          <div class="card cal " style="width: 18rem;">
       <img src="images/team-2.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h4 class="card-title" style="text-align: center;">Janice Doe</h4>
         <p style="text-align: center;"> Associate Dentist</p>
         
       </div>
-    </div><div class="card" style="width: 18rem;">
+    </div>
+    <div class="card" style="width: 18rem;">
       <img src="images/team-1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h4 class="card-title" style="text-align: center;">Peter phillips</h4>
         <p style="text-align: center;">Dental Hygienist</p>
       </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card cal" style="width: 18rem;">
       <img src="images/team-3.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h4 class="card-title" style="text-align: center;">John Doe</h4>
@@ -481,26 +484,28 @@
         </div>
         <div class="carousel-item">
           <div class="card-wrapper container-sm d-flex  justify-content-around">
-          <div class="card " style="width: 18rem;">
+          <div class="card cal" style="width: 18rem;">
       <img src="images/team-1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p>Dentist, Owener</p>
+        
+        <h4 class="card-title" style="text-align: center;">Janice Doe</h4>
+        <p style="text-align: center;"> Associate Dentist</p>
         
       </div>
     </div>
-            <div class="card" style="width: 18rem;">
-      <img src="images/team-2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h4 class="card-title" style="text-align: center;">Peter phillips</h4>
-        <p style="text-align: center;">Dental Hygienist</p>
-      </div>
-            </div>
             <div class="card" style="width: 18rem;">
       <img src="images/team-3.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h4 class="card-title" style="text-align: center;">John Doe</h4>
         <p style="text-align: center;">Dentist, Owener</p>
+       
+      </div>
+            </div>
+            <div class="card cal" style="width: 18rem;">
+      <img src="images/team-2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title" style="text-align: center;">Peter phillips</h4>
+        <p style="text-align: center;">Dental Hygienist</p>
         
       </div>
     </div>
@@ -735,8 +740,6 @@
     document.addEventListener("mousemove", function (e) {
       curserinner.style.cssText = curserouter.style.cssText = "left:" + e.clientX + "px; top:" + e.clientY + "px;";
     });
-
-
 
 
     
