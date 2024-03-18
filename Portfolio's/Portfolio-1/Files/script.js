@@ -1,6 +1,9 @@
+
 let type = new Typed('#changing-text', {
-    strings : ['Front-End developer','Fullstack developer', 'Ui/UX developer'],
+    strings : ['Developer','Fullstack developer', 'Front-End developer'],
     typeSpeed: 50,
     backSpeed: 50,
     loop: true,
 })
+
+

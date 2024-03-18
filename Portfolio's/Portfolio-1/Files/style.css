@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: black;
+    background-color: #081b29;
     color: white;
 }
 
@@ -22,17 +22,17 @@ body {
     opacity: 0;
 }
 
-    .navbar a {
-        display: inline-block;
-        text-decoration: none;
-        color: #fff;
-        padding: 0 16px;
-        font-weight: 600;
-        transition: 0.3s all;
-        animation: navMenu 1s ease forwards;
-        animation-delay: calc(0.2s * var(--i));
-        opacity: 0;
-    }
+.navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 16px;
+    font-weight: 600;
+    transition: 0.3s all;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
 
 .navbar a:hover {
     color: #0ef;
@@ -40,27 +40,25 @@ body {
 
 
 
-/* body  */
+/* body */
 
-.person-container
-{
-   display: flex;
-   padding: 25px 10%;
-   justify-content: center;
-   align-items: center; 
+.person-container {
+    display: flex;
+    padding: 25px 10%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
 }
 
 
-.info-side h3
-{
+.info-side h3 {
     font-size: 30px;
     font-weight: 700;
     margin: 10px 0;
     letter-spacing: 1px;
 }
 
-.info-side h1
-{
+.info-side h1 {
     font-size: 75px;
     letter-spacing: 1px;
     font-weight: 700;
@@ -69,8 +67,7 @@ body {
     opacity: 0;
 }
 
-.info-side h3 span
-{
+.info-side h3 span {
     color: #0ef
 }
 
@@ -87,8 +84,7 @@ body {
 }
 
 
-p
-{
+p {
     line-height: 27px;
     margin: 20px 0px 40px 0px;
     animation: slide-Leftp 1s ease forwards;
@@ -96,19 +92,17 @@ p
     animation-delay: 1.2s;
 }
 
-.person-img img 
-{  
+.person-img img {
     width: 290px;
     border-radius: 10%;
     animation: zoom 1s ease forwards;
     animation-delay: 1s;
     opacity: 0;
-    
+
 }
 
 
-i
-{
+i {
     position: relative;
     border: 2px solid #0ef;
     padding: 10px;
@@ -121,13 +115,11 @@ i
     opacity: 0;
 }
 
-i:hover  
-{
-     box-shadow: 0 0 20px #0ef;
+i:hover {
+    box-shadow: 0 0 20px #0ef;
 }
 
-button
-{
+button {
     background-color: #0ef;
     margin-top: 50px;
     padding: 20px 70px;
@@ -142,14 +134,14 @@ button
     opacity: 0;
 }
 
-button:hover
-{
+button:hover {
     box-shadow: none;
 }
 
 
 
-h1, h3 {
+h1,
+h3 {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -157,19 +149,17 @@ h1, h3 {
 
 /* ==================Animation================== */
 
-@keyframes slideLeft
-{
-    0%
-    {
+@keyframes slideLeft {
+    0% {
         transform: translateX(-100px);
         opacity: 0;
     }
-    100%
-    {
+
+    100% {
         transform: translateX(0);
         opacity: 1;
     }
-} 
+}
 
 
 @keyframes navMenu {
@@ -177,6 +167,7 @@ h1, h3 {
         transform: translateY(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -188,6 +179,7 @@ h1, h3 {
         transform: translateY(-100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -199,6 +191,7 @@ h1, h3 {
         transform: translateY(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -210,6 +203,7 @@ h1, h3 {
         transform: translateX(-100px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -221,6 +215,7 @@ h1, h3 {
         transform: translateX(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -232,6 +227,7 @@ h1, h3 {
         transform: translateX(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -243,6 +239,7 @@ h1, h3 {
         transform: translateY(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -254,6 +251,7 @@ h1, h3 {
         transform: scale(0);
         opacity: 0;
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
@@ -262,91 +260,175 @@ h1, h3 {
 
 
 
+/* ===========================Skill================================ */
 
 
-
-
-
-
-/*=============== SKILLS ===============*/
-.skills__container {
-    row-gap: 3.5rem;
-  }
-  
-  .skills__title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: .5rem;
-    font-size: var(--small-font-size);
-    font-weight: var(--font-semi-bold);
-    margin-bottom: 2.5rem;
-  }
-  
-  .skills__title i {
-    font-size: 1rem;
-    font-weight: initial;
-  }
-  
-  .skills__info, 
-  .skills__data, 
-  .skills__blob {
-    display: grid;
-  }
-  
-  .skills__info {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem 2rem;
-  }
-  
-  .skills__data {
-    justify-content: center;
+.sub-title {
     text-align: center;
-  }
-  
-  .skills__blob {
-    width: 80px;
-    height: 100px;
-    background-color: var(--container-color);
-    border-radius: 3rem;
-    place-items: center;
-    margin-bottom: 1rem;
-    transition: background .4s; /* for dark mode animation */
-  }
-  
-  .skills__blob img {
-    width: 40px;
-  }
-  
-  .skills__name {
-    font-size: var(--small-font-size);
-    margin-bottom: .25rem;
-  }
-  
-  .skills__subtitle {
-    font-size: var(--tiny-font-size);
-    color: var(--text-color-light);
-  }
-  
-  /* Animation skills */
-  .skills__blob:hover img {
-    animation: bounce-skills .6s;
-  }
-  
-  @keyframes bounce-skills {
-    0% {
-      transform: translate(0);
+    font-size: 60px;
+    
+    padding-top: 40px;
+}
+
+.sub-title span {
+    color: #0ef;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container1 {
+    width: 600px;
+    height: 500px;
+    padding: 75px;
+    margin-left: 120px;
+    justify-content: center;
+}
+
+.heading {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar {
+    font-size: 23px;
+}
+
+.technical-bar .bar {
+    margin: 40px 0;
+
+}
+
+.technical-bar .bar:first-child {
+    margin-top: 0;
+}
+
+.technical-bar .bar:last-child {
+    margin-bottom: 0;
+}
+
+.technical-bar .bar .info {
+    margin-bottom: 5px;
+}
+
+.technical-bar .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.technical-bar .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.technical-bar .bar .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 75%;
+}
+
+.progress-line.js span {
+    width: 50%;
+}
+
+.progress-line.react span {
+    width: 55%;
+}
+
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+
+.progress-line.html span::after {
+    content: "90%";
+}
+
+.progress-line.css span::after {
+    content: "75%";
+}
+
+.progress-line.js span::after {
+    content: "50%";
+}
+
+.progress-line.react span::after {
+    content: "55%";
+}
+
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+/* =====================Animation of Skills section======================== */
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
     }
-    20% {
-      transform: translateY(-6px);
+}
+
+
+@keyframes showText{
+    100%{
+        opacity: 1;
     }
-    40% {
-      transform: translate(0);
+}
+
+
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
     }
-    60% {
-      transform: translateY(-3px);
-    }
-    80% {
-      transform: translate(0);
-    }
-  }
+}
+
+.path{
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+}
