@@ -4,268 +4,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRAKASH Portfolio website</title>
+    <title>PRAKASH | Portfolio </title>
+    <link rel="stylesheet" href="asset/style.css">
+    <!--==================Style switcher==========================-->
+    <link rel="stylesheet" href="asset/style-switcher.css">
 
-    <link rel="icon" type="image/png" href="Files/img/portfolio.png">
-    <!-- fontawesome  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- stylesheet  -->
-    <link rel="stylesheet" href="Files/style.css">
+    <link rel="stylesheet" href="asset/skiln/Style-c1.css" class="alternate-style" title="Style-c1">
 
-    <!--Bootstarp-->
-   
+    <link rel="stylesheet" href="asset/skiln/color-1.css" class="alternate-style" title="class-1" disabled>
+    <link rel="stylesheet" href="asset/skiln/color-2.css" class="alternate-style" title="class-2" disabled>
+    <link rel="stylesheet" href="asset/skiln/color-3.css" class="alternate-style" title="class-3" disabled>
+    <link rel="stylesheet" href="asset/skiln/color-4.css" class="alternate-style" title="class-4" disabled>
+    <link rel="stylesheet" href="asset/skiln/color-5.css" class="alternate-style" title="class-5" disabled>
 
 
-
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
-
-    <header class="header">
-        <a href="#" class="logo">PRAKASH</a>
-
-        <nav class="navbar">
-            <a href="" style="--i:1">Home</a>
-            <a href="#SKILLS" style="--i:2">Skill's</a>
-            <a href="#qualification" style="--i:3">Qualification</a>
-            <a href="#Project" style="--i:4">Projects</a>
-            <a href="#Contact" style="--i:5">Contact</a>
-        </nav>
-    </header>
+    <!--====================Main Container Start=======================-->
+    <div class="main-container">
 
 
-
-    <div class="person-container">
-        <div class="info-side">
-            <h3 class="part1"> Hello, It's me </h3>
-            <h1>Prakash</h1>
-            <h3 class="part2">And I'm a <span id="changing-text">Developer</span></h3>
-            <p>Developer with a proven skills to collaborate effectively with senior developers while spending extra
-                time to be mentored. With a passion for both personal growth and for software development.</p>
-
-            <!-- social icons -->
-            <a href=""><i class="fa-brands fa-github   icons" style="--i:6"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin icons" style="--i:7"></i></a>
-            <a href=""><i class="fa-brands fa-twitter icons" style="--i:8"></i></a>
-            <br>
-            <!-- button  -->
-            <button class="btn">Download CV</button>
-        </div>
-        <div class="person-img">
-            <img src="Files/img/Prakash.K-removebg-preview.png" alt="My-pic">
-        </div>
-    </div>
-
-
-    <!-- ========================Skills=========================== -->
-    <section id="SKILLS" >
-        <h1 class="sub-title">
-            My <span>Skills</span>
-        </h1>
-    <div class="section">
-        <section>
-            <div class="container1" id="skill">
-                <h1 class="heading">Technical skills</h1>
-                <div class="technical-bar">
-                    <div class="bar"><i  class="fa-brands fa-html5"></i>
-                        <div class="indfo">
-                            <span>HTML</span>
-                        </div>
-                        <div class="progress-line html">
-                            <span></span>
-                        </div>
-                    </div>
-    
-                    <div class="bar"><i  class="fa-brands fa-css3-alt"></i>
-                        <div class="indfo">
-                            <span>CSS</span>
-                        </div>
-                        <div class="progress-line css">
-                            <span></span>
-                        </div>
-                    </div>
-    
-                    <div class="bar"><i  class="fa-brands fa-js"></i>
-                        <div class="indfo">
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="progress-line js">
-                            <span></span>
-                        </div>
-                    </div>
-    
-                    <div class="bar"><i  class="fa-brands fa-react"></i>
-                        <div class="indfo">
-                            <span>React</span>
-                        </div>
-                        <div class="progress-line react">
-                            <span></span>
-                        </div>
-                    </div>
-            
-                </div>
+        <!--================Aside start==================-->
+        <div class="aside">
+            <div class="logo">
+                <a href="#">PRA<span>K</span>ASH</a>
             </div>
-        </section>
-    
-        <section>
-            <div class="container1">
-                <h1 class="heading">Professional Skills</h1>
-                <div class="radial-bars">
-    
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                     
-                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">80%</div>
-                        <div class="text">Creativity</div>
-                    </div>
-    
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                     
-                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">60%</div>
-                        <div class="text">Communication</div>
-                    </div>
-    
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                     
-                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">50%</div>
-                        <div class="text">Problem Solving</div>
-                    </div>
-    
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                     
-                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">85%</div>
-                        <div class="text">Team Work</div>
-                    </div>
-
-                  
-
-                
-                </div>
+            <div class="nav-toggler">
+                <span></span>
             </div>
-        </section>
+            <ul class="nav">
+                <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+                <li><a href="#service"><i class="fa fa-list"></i>Services</a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
+            </ul>
+        </div><!--==========Aside End=============-->
+
+
+
+        <!---==============main content start==============-->
+        <div class="main-content">
+            <!--===========Home section start================-->
+            <section class="home section" id="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h3 class="hello">Hello, my name is <span class="name">Prakash</span></h3>
+                            <h3 class="my-profession">I'm a <span class="typing">Full Stack developer </span></h3>
+                            <p>Developer with a proven skills to collaborate effectively with senior developers while
+                                spending extra time to be mentored. With a passion for both personal growth and for
+                                software development, and many more....</p>
+
+                            <div class="social-icons"> <a href="#about" class="btn hire-me">More About Me!</a>
+                            </div>
+                        </div>
+                        <div class="home-img padd-15">
+                            <img src="asset/img/Prakash.K-removebg-preview.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===========Home section End================-->
+
+            <!--===========About section start================-->
+            <section class="about section " id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>About Me</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="about-content padd-15">
+                            <div class="row">
+                                <div class="about-text padd-15">
+                                    <h3>I'm Prakash <span>Full Stack developer</span></h3>
+                                    <p>
+                                        To use my skills and experience in a progressive company
+                                        where I can tackle challenges, help achieve goals, and grow
+                                        professionally by learning and innovating. I'm excited about
+                                        using new technologies and methods to help the company
+                                        succeed and move my career forward.
+
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="personal-info padd-15">
+                                    <div class="row">
+                                        <div class="info-item padd-15">
+                                            <p>Degree : <span>B.Tech(IT)</span></p>
+                                        </div>
+
+                                        <div class="info-item padd-15">
+                                            <a
+                                                href="mailto:prakashkandasamy4@gmail.com?subject=Subject%20Here&body=Message%20Here">
+                                                <p>Email : <span>prakash@gmail.com</span></p>
+                                            </a>
+                                        </div>
+
+                                        <div class="info-item padd-15">
+                                            <p>Course : <span>Full stack (MERN)</span></p>
+                                        </div>
+
+                                        <div class="info-item padd-15">
+                                            <p>Phone-no : <span>9865579294</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>City : <span>Salem</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Freelance : <span>Avaiabel</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="buttons padd-15">
+                                            <a href="asset/PRAKASH.K.pdf.pdf" class="btn" download="">Downlod cv</a>
+                                            <a href="#contact" class="btn hire Me">Hire Me </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skills padd-15">
+                                    <div class="row">
+                                        <div class="skill-item padd-15">
+                                            <h5>HTML</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 89%;"></div>
+                                                <div class="skill-percent">89%</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-item padd-15">
+                                            <h5>CSS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 75%;"></div>
+                                                <div class="skill-percent">75%</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-item padd-15">
+                                            <h5>JavaScript</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 50%;"></div>
+                                                <div class="skill-percent">50%</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-item padd-15">
+                                            <h5>React Js</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 60%;"></div>
+                                                <div class="skill-percent">60%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="education padd-15">
+                                    <h3 class="title">Education</h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadow-dark">
+
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2019 - 2023
+                                                    </h3>
+                                                    <h4 class="timeline-title">Bachelor of Technology</h4>
+                                                    <p class="timeline-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Quo velit consectetur illo, tempore, dolorem
+                                                        quae, dolor ipsam suscipit provident ipsa totam dolore
+                                                        voluptatem. Fugiat aliquid, fuga voluptates voluptatem tempore
+                                                        cumque!</p>
+                                                </div>
+
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2018 - 2019
+                                                    </h3>
+                                                    <h4 class="timeline-title"> HSC</h4>
+                                                    <p class="timeline-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Quo velit consectetur illo, tempore, dolorem
+                                                        quae, dolor ipsam suscipit provident ipsa totam dolore
+                                                        voluptatem. Fugiat aliquid, fuga voluptates voluptatem tempore
+                                                        cumque!</p>
+                                                </div>
+
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2016 - 2017
+                                                    </h3>
+                                                    <h4 class="timeline-title"> SSLC </h4>
+                                                    <p class="timeline-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Quo velit consectetur illo, tempore, dolorem
+                                                        quae, dolor ipsam suscipit provident ipsa totam dolore
+                                                        voluptatem. Fugiat aliquid, fuga voluptates voluptatem tempore
+                                                        cumque!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--===========About section End================-->
+
+            <!--===========Service section Start================-->
+            <section class="service section" id="service">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Services</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-mobile-alt"></i>
+                                </div>
+                                <h4> Mobile Application </h4>
+                                <p>Lorem ipsum dolor sit amet adipisicing elit.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-code"></i>
+                                </div>
+                                <h4> Web Development </h4>
+                                <p>Lorem ipsum dolor sit amet adipisicing elit.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-laptop-code"></i>
+                                </div>
+                                <h4> Software Development </h4>
+                                <p>Lorem ipsum dolor sit amet adipisicing elit.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-mobile-alt"></i>
+                                </div>
+                                <h4> Mobile Application </h4>
+                                <p>Lorem ipsum dolor sit amet adipisicing elit.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-code"></i>
+                                </div>
+                                <h4> Web Development </h4>
+                                <p>Lorem ipsum dolor sit amet adipisicing elit.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-laptop-code"></i>
+                                </div>
+                                <h4> Software Development </h4>
+                                <p>Lorem ipsum dolor sit amet adipisicing elit.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!--===========Service section End================-->
+
+            <!--==========Contact section Start=============-->
+            <section class="contact section " id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Contact Me</h2>
+                        </div>
+                    </div>
+                    <h3 class="contact-title padd-15">Have you Any Questions ?</h3>
+                    <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
+                    <div class="row">
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-phone"></i></div>
+                            <a href="tel:+919865579294">
+                                <h4>Call Us On</h4>
+                                <p>Dial to me</p>
+                            </a>
+                        </div>
+
+
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                            <a href="https://api.whatsapp.com/send?phone=9865579294&text=Hello,%20more%20information!"
+                                target="_blank">
+                                <h4>Whatsapp</h4>
+                                <p>Chat with me</p>
+                            </a>
+                        </div>
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-envelope"></i></div>
+                            <a href="mailto:prakashkandasamy4@gmail.com?subject=Subject%20Here&body=Message%20Here">
+                                <h4>Email</h4>
+                                <p>Send a mail</p>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Salem" target="_blank">
+                                <h4>City</h4>
+                                <p>Salem</p>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </section>
+            <!--==========Contact section Start=============-->
+        </div>
+
     </div>
-    </section>
+
+    <!---==============main content End==============-->
+
+    <!--===============Style Switcher start==================-->
     
-
-    <!--==================== QUALIFICATION ====================--> 
-
-
-
-
-
-     <!--==================== Projects ====================-->
-     <div class="content">
-        <h2>Completed <span>Projects</span></h2>
-    </div>
-<section id="Project" class="pro">
-  
-    <div class="slider">
-        <div class="item">
-            <h1>Slide 1</h1>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
-        </div>
-        <div class="item">
-            <h1>Slide 2</h1>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
-        </div>
-        <div class="item">
-            <h1>Slide 3</h1>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
-        </div>
-        <div class="item">
-            <h1>Slide 4</h1>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
-        </div>
-        <div class="item">
-            <h1>Slide 5</h1>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
-        </div>
-        <div class="item">
-            <h1>Slide 6</h1>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
-        </div>
-        <div class="item">
-            <h1>Slide 7</h1>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit molestiae officiis!
-        </div>
-        <button id="next">></button>
-        <button id="prev"><</button>
-    </div>
-
-</section>
-
-
-    <!--==================== Contact ====================-->
-    <section id="Contact" class="Contact">
-
-        <div class="content">
-            <h2>Contact <span>Me</span></h2>
-        </div>
-
-        <div class="container">
-            <div class="contactInfo">
-                <div class="box">
-                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <div class="text">
-                        <h3> Address </h3>
-                        <p>Dasanaickenpatti <br> Salem - 636201</p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
-                    <div class="text">
-                        <h3> Email </h3>
-                        <p> prakashkandasamy4@gmail.com </p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
-                    <div class="text">
-                        <h3> Phone </h3>
-                        <p>9865579294</p>
-                    </div>
-                </div>
-
-            </div>
-
-
-           
-            
-         
-        </div>
-
-
-    </section>
-
-
-
-     
+    <!--================Style switch End=====================-->
 
 
 
 
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="Files/script.js"></script>
+
+    <script src="asset/script.js"></script>
+    <script src="asset/style-switcher.js"></script>
+
+
 </body>
 
 </html>
