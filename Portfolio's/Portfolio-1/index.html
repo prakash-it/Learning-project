@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRAKASH | Portfolio </title>
     <link rel="stylesheet" href="asset/style.css">
+    <link rel="stylesheet" href="asset/skiln/color-1.css">
     <!--==================Style switcher==========================-->
+    
+
     <link rel="stylesheet" href="asset/style-switcher.css">
-
-    <link rel="stylesheet" href="asset/skiln/Style-c1.css" class="alternate-style" title="Style-c1">
-
+    
     <link rel="stylesheet" href="asset/skiln/color-1.css" class="alternate-style" title="class-1" disabled>
     <link rel="stylesheet" href="asset/skiln/color-2.css" class="alternate-style" title="class-2" disabled>
     <link rel="stylesheet" href="asset/skiln/color-3.css" class="alternate-style" title="class-3" disabled>
     <link rel="stylesheet" href="asset/skiln/color-4.css" class="alternate-style" title="class-4" disabled>
     <link rel="stylesheet" href="asset/skiln/color-5.css" class="alternate-style" title="class-5" disabled>
-
-
     <!--icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -30,7 +29,7 @@
         <!--================Aside start==================-->
         <div class="aside">
             <div class="logo">
-                <a href="#">PRA<span>K</span>ASH</a>
+                <a href="#home">PRA<span>K</span>ASH</a>
             </div>
             <div class="nav-toggler">
                 <span></span>
@@ -48,12 +47,12 @@
         <!---==============main content start==============-->
         <div class="main-content">
             <!--===========Home section start================-->
-            <section class="home section" id="home">
+            <section class="home  section" id="home">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
                             <h3 class="hello">Hello, my name is <span class="name">Prakash</span></h3>
-                            <h3 class="my-profession">I'm a <span class="typing">Full Stack developer </span></h3>
+                            <h3 class="my-profession">I'm a <span class="typing">MERN Stack Developer </span></h3>
                             <p>Developer with a proven skills to collaborate effectively with senior developers while
                                 spending extra time to be mentored. With a passion for both personal growth and for
                                 software development, and many more....</p>
@@ -357,15 +356,26 @@
     <!---==============main content End==============-->
 
     <!--===============Style Switcher start==================-->
-    
+        <div class="style-switcher ">
+            <div class="style-switcher-toggler s-icon">
+                <i class="fas fa-cog fa-spin"></i>
+            </div>
+            <div class="day-night s-icon">
+                <i class="fas "></i>
+            </div>
+            <h4>Theme Colors</h4>
+            <div class="colors">
+                <span class="color-1" onclick="setActiveStyle('class-1')" title="Class 1"></span>
+                <span class="color-2" onclick="setActiveStyle('class-2')" title="Class 2"></span>
+                <span class="color-3" onclick="setActiveStyle('class-3')" title="Class 3"></span>
+                <span class="color-4" onclick="setActiveStyle('class-4')" title="Class 4"></span>
+                <span class="color-5" onclick="setActiveStyle('class-5')" title="Class 5"></span>
+            </div>
+        </div>
     <!--================Style switch End=====================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="asset/script.js"></script> 
 
-
-
-
-
-
-    <script src="asset/script.js"></script>
     <script src="asset/style-switcher.js"></script>
 
 
