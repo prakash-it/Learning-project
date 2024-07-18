@@ -5,16 +5,21 @@ import About from './Pages/About'
 import Signin from './Pages/Signin'
 import Signup from './Pages/Signup'
 import Profile from './Pages/Profile'
+import Nav from './components/Nav'
 function App() {
   return (
    <BrowserRouter>
-  <Routes>   
+   <Nav/>
+  <Routes>  
+
    <Route path='/' element={<Home/>} />
    <Route path='/About' element={<About/>}/>
    <Route path='/signin' element={<Signin/>}/>
    <Route path='signup' element={<Signup/>}/>
    <Route path='/profile' element={<Profile/>}/>
+
    </Routes>
+
    </BrowserRouter>
   )
 }
