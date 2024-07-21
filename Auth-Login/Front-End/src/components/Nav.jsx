@@ -12,7 +12,7 @@ export default function Nav() {
         <ul className='flex gap-4'>
           <Link to='/'><li className='text-slate-700 hover:text-white'>Home</li></Link>
           <Link to='/about'><li className='text-slate-700 hover:text-white'>About</li></Link>
-          <Link to='signup'><li className='text-slate-700 hover:text-white'>Signin</li></Link>
+          <Link to='signup'><li className='text-slate-700 hover:text-white'>Sigup</li></Link>
           <Link to='signin'><li className='text-slate-700 hover:text-white'>Sigin</li></Link>
         </ul>
       </div>
