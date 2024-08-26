@@ -1,12 +1,12 @@
 const express = require('express');
-const { signup, login, logout } = require('../controllers/authControllers');
+const { signup, login, logout, verifyEmail } = require('../controllers/authControllers');
 
 const routes = express.Router();
 
 routes.post('/signup',signup)
+routes.post('/login', login)
+routes.post('/logout', logout)
 
-routes.get('/login', login)
-
-routes.get('/logout', logout)
+routes.post('/verify-Email',verifyEmail)
 
 module.exports = routes;

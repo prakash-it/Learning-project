@@ -1,7 +1,7 @@
 const Usermodel = require('../models/usresmodels');
 const bcrypt = require('bcryptjs');
 const generateTokenAndSetCookie = require('../utils/generateTokenAndSetCookie');
-const { sendVerificationEmail } = require('../Mailtrap/emails'); 
+const { sendVerificationEmail, sendWelcomeEmail } = require('../Mailtrap/emails'); 
 
 const signup = async (req, res) => {
     try {
@@ -46,6 +46,40 @@ const signup = async (req, res) => {
     }
 };
 
+const verifyEmail = async (req, res) => {
+    const { code } = req.body;
+
+    try {
+        const user = await Usermodel.findOne({
+            verificationToken: code,
+            verificationTokenExpiresAt: { $gt: Date.now() }
+        });
+
+        if (!user) {
+            return res.status(400).json({ message: "Invalid or Expired verification code" });
+        }
+
+        user.isVerified = true;
+        user.verificationToken = undefined;
+        user.verificationTokenExpiresAt = undefined;
+
+        await user.save();
+
+        await sendWelcomeEmail(user.email, user.username);
+
+        res.status(200).json({
+            message: "Verification is Successful",
+            user: {
+                ...user._doc,
+                password: undefined
+            }
+        });
+    } catch (error) {
+        console.error("Error verifying email:", error);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
+};
+
 const login = async (req, res) => {
     res.send("login route");
 };
@@ -54,4 +88,4 @@ const logout = async (req, res) => {
     res.send("logout route");
 };
 
-module.exports = { signup, login, logout };
+module.exports = { signup, login, logout, verifyEmail };
