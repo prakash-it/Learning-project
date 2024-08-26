@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyparser = require('body-parser')
+const cookieParser = require('cookie-parser')
 const authroute = require('./routes/auth')
 const DataBase = require('./Db/Database')
 const app = express()
@@ -8,6 +9,8 @@ require('dotenv').config()
 DataBase()
 
 app.use(bodyparser.json())
+app.use(cookieParser())
+
 app.use('/api/auth',authroute)
 
 app.use('/',(req,res)=>{
