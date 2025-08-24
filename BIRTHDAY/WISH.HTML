@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎉</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap');
+        
+        .birthday-text {
+            font-family: 'Pacifico', cursive;
+        }
+        
+        .cursive-text {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .elegant-text {
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid orange;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        /* Animation Classes */
+        .animate-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        
+        .animate-slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideInLeft 1s ease-out forwards;
+        }
+        
+        .animate-slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            animation: slideInRight 1s ease-out forwards;
+        }
+        
+        .animate-scale-in {
+            opacity: 0;
+            transform: scale(0.8);
+            animation: scaleIn 1s ease-out forwards;
+        }
+        
+        .animate-bounce-in {
+            opacity: 0;
+            transform: scale(0.3);
+            animation: bounceIn 1s ease-out forwards;
+        }
+        
+        .animate-rotate-in {
+            opacity: 0;
+            transform: rotate(-180deg) scale(0.5);
+            animation: rotateIn 1.2s ease-out forwards;
+        }
+        
+        .animate-stagger > * {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .animate-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+        .animate-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+        .animate-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+        .animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+        .animate-stagger > *:nth-child(5) { animation-delay: 0.5s; }
+        .animate-stagger > *:nth-child(6) { animation-delay: 0.6s; }
+        
+        /* Keyframes */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes rotateIn {
+            to {
+                opacity: 1;
+                transform: rotate(0) scale(1);
+            }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+        
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg">
+    <div id="preloader" class="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        const BirthdayWish = () => {
+            const [showConfetti, setShowConfetti] = useState(false);
+            const [audioPlaying, setAudioPlaying] = useState(false);
+            const [currentMessage, setCurrentMessage] = useState(0);
+            const [pageLoaded, setPageLoaded] = useState(false);
+            const audioRef = useRef(null);
+            const messages = [
+                "Wishing you a day filled with happiness!",
+                "May your special day be as wonderful as you are!",
+                "Here's to another amazing year ahead!",
+                "Celebrate like there's no tomorrow!",
+                "You deserve all the best today and always!"
+            ];
+
+            useEffect(() => {
+                // Hide preloader and trigger entrance animations
+                setTimeout(() => {
+                    document.getElementById('preloader').style.opacity = '0';
+                    setTimeout(() => {
+                        document.getElementById('preloader').style.display = 'none';
+                        setPageLoaded(true);
+                        
+                        // Initial confetti burst
+                        confetti({
+                            particleCount: 200,
+                            spread: 100,
+                            origin: { y: 0.6 }
+                        });
+                    }, 500);
+                }, 2000);
+            }, []);
+
+            useEffect(() => {
+                const interval = setInterval(() => {
+                    setCurrentMessage((prev) => (prev + 1) % messages.length);
+                }, 3000);
+                return () => clearInterval(interval);
+            }, []);
+
+            const triggerConfetti = () => {
+                setShowConfetti(true);
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+                
+                setTimeout(() => setShowConfetti(false), 3000);
+            };
+
+            const toggleAudio = () => {
+                if (audioPlaying) {
+                    audioRef.current.pause();
+                } else {
+                    audioRef.current.play();
+                }
+                setAudioPlaying(!audioPlaying);
+            };
+
+            const createCustomConfetti = () => {
+                for (let i = 0; i < 50; i++) {
+                    setTimeout(() => {
+                        confetti({
+                            particleCount: 5,
+                            angle: Math.random() * 360,
+                            spread: Math.random() * 50 + 30,
+                            origin: { x: Math.random(), y: Math.random() },
+                            colors: ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff']
+                        });
+                    }, i * 100);
+                }
+            };
+
+            return (
+                <div className="min-h-screen relative overflow-hidden">
+                    {/* Background Elements */}
+                    <div className="absolute inset-0 opacity-10">
+                        {[...Array(20)].map((_, i) => (
+                            <div
+                                key={i}
+                                className="absolute text-yellow-400 text-4xl floating"
+                                style={{
+                                    left: `${Math.random() * 100}%`,
+                                    top: `${Math.random() * 100}%`,
+                                    animationDelay: `${Math.random() * 2}s`,
+                                    animationDuration: `${Math.random() * 3 + 2}s`
+                                }}
+                            >
+                                ★
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Audio Element */}
+                    <audio
+                        ref={audioRef}
+                        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                        loop
+                    />
+
+                    {/* Main Content */}
+                    <div className="relative z-10 container mx-auto px-6 py-12">
+                        {/* Header with Entrance Animation */}
+                        <div className={`text-center mb-12 ${pageLoaded ? 'animate-bounce-in' : 'opacity-0'}`}>
+                            <h1 className="birthday-text text-5xl md:text-7xl text-white mb-6 floating">
+                                Happy Birthday! 🎂
+                            </h1>
+                            <p className="cursive-text text-2xl md:text-3xl text-yellow-200 mb-8 typewriter">
+                                {messages[currentMessage]}
+                            </p>
+                            
+                            <div className="flex justify-center space-x-4 mb-8 animate-stagger">
+                                <button
+                                    onClick={triggerConfetti}
+                                    className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-110 pulse"
+                                >
+                                    <i className="fas fa-birthday-cake mr-2"></i>
+                                    Throw Confetti!
+                                </button>
+                                
+                                <button
+                                    onClick={toggleAudio}
+                                    className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-110"
+                                >
+                                    <i className={`fas ${audioPlaying ? 'fa-volume-up' : 'fa-volume-mute'} mr-2`}></i>
+                                    {audioPlaying ? 'Mute' : 'Play Music'}
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Birthday Card with Slide Animation */}
+                        <div className={`max-w-2xl mx-auto bg-white/20 backdrop-blur-md rounded-3xl p-8 mb-12 card-hover ${pageLoaded ? 'animate-slide-in-left' : 'opacity-0'}`}>
+                            <div className="text-center">
+                                <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 p-1 animate-scale-in">
+                                    <img
+                                        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/31342864-4369-4aa1-8cdd-385b80151de4.png"
+                                        alt="Birthday person smiling with party hat and balloons in background"
+                                        className="w-full h-full rounded-full object-cover border-4 border-white"
+                                    />
+                                </div>
+                                
+                                <h2 className="elegant-text text-4xl text-white mb-4">To Someone Special</h2>
+                                <p className="text-lg text-yellow-100 mb-6 leading-relaxed">
+                                    On your special day, I wish you all the joy, success, and happiness in the world. 
+                                    May this year bring you closer to your dreams and fill your life with wonderful moments. 
+                                    You are an amazing person, and I'm grateful to have you in my life!
+                                </p>
+                                
+                                <div className="flex justify-center space-x-2 mb-6">
+                                    {['🎁', '🎈', '🎉', '🥳', '✨'].map((emoji, index) => (
+                                        <span key={index} className="text-3xl floating" style={{animationDelay: `${index * 0.2}s`}}>
+                                            {emoji}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Photo Memories Grid with Stagger Animation */}
+                        <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 ${pageLoaded ? 'animate-stagger' : 'opacity-0'}`}>
+                            {[
+                                "Birthday cake with candles in dark room with glowing lights",
+                                "Group of friends celebrating with party hats and smiles",
+                                "Colorful balloons floating against blue sky background",
+                                "Gift boxes wrapped with ribbons and bows on table",
+                                "Sparkling fireworks lighting up the night sky",
+                                "Champagne glasses clinking in celebration toast"
+                            ].map((alt, index) => (
+                                <div key={index} className="relative group overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-300">
+                                    <img
+                                        src={`https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/24ada581-fb07-454f-a0b3-c81ae03bcd46.png + 1}`}
+                                        alt={alt}
+                                        className="w-full h-48 object-cover group-hover:brightness-110 transition-all duration-300"
+                                    />
+                                    <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <span className="text-white font-semibold">Memory #{index + 1}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Interactive Wish Board with Scale Animation */}
+                        <div className={`bg-white/10 backdrop-blur-md rounded-3xl p-8 mb-12 ${pageLoaded ? 'animate-scale-in' : 'opacity-0'}`}>
+                            <h3 className="text-2xl font-bold text-white text-center mb-6">Leave a Birthday Wish</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <input
+                                    type="text"
+                                    placeholder="Your Name"
+                                    className="bg-white/20 border border-white/30 rounded-xl px-4 py-3 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                                />
+                                <textarea
+                                    placeholder="Your birthday message..."
+                                    rows="3"
+                                    className="bg-white/20 border border-white/30 rounded-xl px-4 py-3 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
+                                ></textarea>
+                            </div>
+                            <button
+                                onClick={createCustomConfetti}
+                                className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 rounded-xl mt-4 transition-all transform hover:scale-105"
+                            >
+                                Send Wish with Confetti! 🎊
+                            </button>
+                        </div>
+
+                        {/* Footer with Fade Animation */}
+                        <div className={`text-center ${pageLoaded ? 'animate-fade-in' : 'opacity-0'}`}>
+                            <p className="text-white/80 text-sm">
+                                Made with ❤️ using React.js & Tailwind CSS
+                            </p>
+                            <p className="text-white/60 text-xs mt-2">
+                                © 2024 Special Birthday Wishes
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Floating Balloons */}
+                    <div className="fixed bottom-0 left-0 right-0 pointer-events-none">
+                        {[...Array(6)].map((_, i) => (
+                            <div
+                                key={i}
+                                className="absolute text-4xl floating"
+                                style={{
+                                    left: `${20 + i * 15}%`,
+                                    bottom: '-50px',
+                                    animationDelay: `${i * 0.5}s`,
+                                    animationDuration: `${6 + i * 2}s`
+                                }}
+                            >
+                                🎈
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Celebration Overlay (Temporary) */}
+                    {showConfetti && (
+                        <div className="fixed inset-0 pointer-events-none z-50">
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl text-yellow-400 animate-bounce">
+                                🎉
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        };
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<BirthdayWish />);
+    </script>
+</body>
+</html>
+
